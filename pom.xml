@@ -20,7 +20,8 @@
     </licenses>
 
     <properties>
-        <resteasy.ver>4.5.2.Final</resteasy.ver>
+<!--        <resteasy.ver>4.5.2.Final</resteasy.ver>-->
+        <resteasy.ver>3.7.0.Final</resteasy.ver>
         <javax.servlet.ver>4.0.1</javax.servlet.ver>
         <jetty.maven.plugin.ver>9.4.24.v20191120</jetty.maven.plugin.ver>
     </properties>
@@ -32,19 +33,25 @@
             <version>${javax.servlet.ver}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-core-spi</artifactId>
-            <version>${resteasy.ver}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-core</artifactId>
-            <version>${resteasy.ver}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.jboss.resteasy</groupId>-->
+<!--            <artifactId>resteasy-core-spi</artifactId>-->
+<!--            <version>${resteasy.ver}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.jboss.resteasy</groupId>-->
+<!--            <artifactId>resteasy-core</artifactId>-->
+<!--            <version>${resteasy.ver}</version>-->
+<!--        </dependency>-->
+<!--        这个`resteasy-servlet-initializer`必须要有:-->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-servlet-initializer</artifactId>
+            <version>${resteasy.ver}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
             <version>${resteasy.ver}</version>
         </dependency>
     </dependencies>
